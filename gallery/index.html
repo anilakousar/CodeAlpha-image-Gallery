@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Filterable Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <h1>Responsive Filterable Image Gallery</h1>
+
+  <div class="gallery-controls">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="nature">Shoes</button>
+    <button class="filter-btn" data-filter="city">Bags</button>
+    <button class="filter-btn" data-filter="animals">Watches</button>
+  </div>
+
+  <div class="gallery">
+    <!-- shoes -->
+    <div class="gallery-item" data-category="shoes">
+      <img src="images/shoe.jpg" alt="shoes 1">
+    </div>
+    <div class="gallery-item" data-category="shoes">
+      <img src="images/white1-shoe.jpeg" alt="shoes 2">
+    </div>
+    <div class="gallery-item" data-category="shoes">
+      <img src="images/courtshoe.jpg" alt="shoes 3">
+    </div>
+
+    <!-- bags -->
+    <div class="gallery-item" data-category="bags">
+      <img src="images/sky-bag.jpeg" alt="bag 1">
+    </div>
+    <div class="gallery-item" data-category="bags">
+      <img src="images/white.jpeg" alt="bag 2">
+    </div>
+    <div class="gallery-item" data-category="bags">
+      <img src="images/white-bag.jpeg" alt="bag 3">
+    </div>
+
+    <!-- watches -->
+    <div class="gallery-item" data-category="watches">
+      <img src="images/watch-5.jpeg" alt="watches 1">
+    </div>
+    <div class="gallery-item" data-category="watches">
+      <img src="images/watch3.jpg" alt="watches 2">
+    </div>
+    <div class="gallery-item" data-category="watches">
+      <img src="images/pink-watch.jpeg" alt="watches 3">
+    </div>
+  </div>
+
+  <!-- Preview Overlay -->
+  <div class="preview-overlay" id="previewOverlay">
+    <div class="preview-container">
+      <button class="nav-btn prev" id="prevBtn" aria-label="Previous image">&lsaquo;</button>
+      <img src="" alt="Preview" id="previewImg">
+      <button class="nav-btn next" id="nextBtn" aria-label="Next image">&rsaquo;</button>
+      <button class="close-btn" id="closeBtn" aria-label="Close preview">&times;</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  </body>
+</html>

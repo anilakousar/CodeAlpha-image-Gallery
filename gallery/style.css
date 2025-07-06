@@ -1,0 +1,86 @@
+ *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;background:#f4f4f4;color:#333;padding:1rem}
+    h1{text-align:center;margin-bottom:1rem}
+    .gallery-controls{text-align:center;margin-bottom:1.5rem}
+    .filter-btn{
+      display:inline-block;
+      margin:.3rem;
+      padding:.4rem .9rem;
+      border:1px solid #7a48a6;
+      border-radius:20px;
+      background:#fff;
+      cursor:pointer;
+      transition:all .3s ease;
+    }
+    h1{
+        color: rgb(156, 73, 207);
+        text-decoration:underline;
+    }
+    .filter-btn.active,
+    .filter-btn:hover{background:#7a48a6;color:#fff}
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+      gap:15px;
+    }
+    .gallery img{
+      width:100%;
+      border-radius:12px;
+      cursor:pointer;
+      height:220px;
+      transition:transform .3s ease;
+    }
+    .gallery img:hover{transform:scale(1.04)}
+    /* Preview overlay */
+    .preview-overlay{
+      position:fixed;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,.8);
+      opacity:0;
+      visibility:hidden;
+      transition:opacity .3s ease;
+      z-index:1000;
+    }
+    .preview-overlay.show{
+      opacity:1;
+      visibility:visible;
+    }
+    .preview-container{
+      position:relative;
+      max-width:70%;
+      max-height:70%;
+    }
+    .preview-container img{
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      display:block;
+    }
+    .nav-btn,
+    .close-btn{
+      position:absolute;
+      background:rgba(0,0,0,.6);
+      color:#fff;
+      border:none;
+      border-radius:50%;
+      width:50px;
+      height:44px;
+      font-size:1.6rem;
+      line-height:44px;
+      text-align:center;
+      cursor:pointer;
+      transition:3s ease;
+    }
+    .nav-btn:hover,
+    .close-btn:hover{background:rgba(0,0,0,.75)}
+    .prev{left:-60px;top:50%;transform:translateY(-50%)}
+    .next{right:-60px;top:50%;transform:translateY(-50%)}
+    .close-btn{top:-60px;right:0;font-size:2rem;line-height:44px}
+    @media(max-width:600px){
+      .prev{left:10px}
+      .next{right:10px}
+      .close-btn{top:10px;right:10px}
+    }
